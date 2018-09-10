@@ -20,8 +20,13 @@ module FunWithStrings
   
   def anagram_groups
     # your code here
-    
-  end
+      a = self.split
+      if a.empty? == true
+        return a
+      else
+        a.group_by{ |word| word.downcase.chars.sort }.values
+      end
+  end 
 end
 
 # make all the above functions available as instance methods on Strings:
